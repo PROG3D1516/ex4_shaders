@@ -1,4 +1,9 @@
 #Exercício de Shaders (EX4)
+## Passo 0
+
+Este exercício está diposnível no GitHub no seguinte endereço: `https://github.com/PROG3D1516/ex4_shaders`
+
+[Exercício 4] (https://github.com/PROG3D1516/ex4_shaders "Exercício 4")
 
 ## Passo 1
 

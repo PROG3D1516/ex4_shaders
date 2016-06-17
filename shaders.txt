@@ -1,22 +1,18 @@
-// vertex shader
- 
-varying vec2 surfacePos;
- 
 void main()
 {
-    // take our texture's surface position from the 2D
-    // coordinates of gl_Vertex
-    surfacePos = gl_Vertex.xy;
- 
-    // this is the critical line: set the vertex's screen position.
-    gl_Position = gl_ProjectionMatrix *  gl_ModelViewMatrix * gl_Vertex;
+    // posicao na superficie 
+    surfacePos = position.xy;
+
+    calcular a posicao do vertex em coordenadas de ecra
+    gl_Position = projectionMatrix *  modelViewMatrix * vec4(position,1);
 }
 
+        </script>
 
-// fragment shader
- 
-varying vec2 surfacePos;
-const float checkSize = 5.0;
+<script id="fragmentshader1" type="x-shader/x-fragment">
+
+    varying vec2 surfacePos;
+    const float checkSize = 0.25;
  
 void main()
 {
@@ -33,8 +29,8 @@ void main()
     {
         color = vec3(1, 1, 1);
     }
+
  
     // this is the critical line: set the actual fragment colour.
     gl_FragColor = vec4(color, 1.0);
 }
-

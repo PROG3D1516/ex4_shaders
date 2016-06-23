@@ -1,11 +1,17 @@
+<script id="vertexShader1" type="x-shader/x-vertex">
+
+varying vec2 surfacePos;
 void main()
 {
     // posicao na superficie 
     surfacePos = position.xy;
 
-    calcular a posicao do vertex em coordenadas de ecra
+    //calcular a posicao do vertex em coordenadas de ecra
     gl_Position = projectionMatrix *  modelViewMatrix * vec4(position,1);
 }
+
+        </script>
+
 
         </script>
 
